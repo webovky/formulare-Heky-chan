@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    background-color: rgb(110, 110, 110);
+    flex: 2;
+    padding: 0px;
+}
+nav p {
+    background-color: rgb(0, 0, 0);
+    padding: 30px 0px 20px 40px;
+    flex: 5;
+}
+nav li {
+    list-style-type: none;
+}
+
+@media screen and (max-width: 790px) {
+    .global {
+        margin: 1em;
+    }
+}
+
+main p {
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    border: 3px solid rgb(110, 110, 110);
+    padding: 10px;
+  }

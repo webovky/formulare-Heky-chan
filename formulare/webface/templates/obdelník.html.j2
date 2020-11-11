@@ -1,0 +1,19 @@
+{% extends "base.html.j2" %}
+
+{% block obsah %}
+<p><img src="{{url_for('static', filename='obdelník.png')}}" alt="čtverec",width="250" height="250" align="left"/></p>
+<p><img src="{{url_for('static', filename='obdelník2.png')}}" alt="čtverec",width="250" height="250" align="right"/></p>
+<a href="https://www.google.cz/search?q=obd%C3%A9ln%C3%ADk&tbm=isch&ved=2ahUKEwjw1rXCv_rsAhWBG-wKHXsTAZoQ2-cCegQIABAA&oq=obd%C3%A9ln%C3%ADk&gs_lcp=CgNpbWcQA1AAWABgsJIXaABwAHgAgAEAiAEAkgEAmAEAqgELZ3dzLXdpei1pbWc&sclient=img&ei=jNmrX_DgM4G3sAf7poTQCQ&authuser=0&bih=880&biw=1920&hl=cs">Google vyhledávíní obdelníku</a>
+
+<p><strong>Obsah obdelníku</strong></p>
+
+<form method='get'>
+    <input type="text" name="x" value="{{request.args.get('x') or '' }}" placeholder="strana a"/>
+
+    <input type="text" name="y" value="{{request.args.get('y') or '' }}" placeholder="strana b"/>
+    <input type="submit" name="tlacitko" value="vypočítej to!"/>
+</form> 
+
+Obsah: {{ z }} j&sup2 <br>
+Obvod: {{ n }} j
+{% endblock obsah %}

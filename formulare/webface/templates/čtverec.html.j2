@@ -1,0 +1,17 @@
+{% extends "base.html.j2" %}
+
+{% block obsah %}
+<p><img src="{{url_for('static', filename='čtverec.png')}}" alt="čtverec", align="left"/></p>
+<p><img src="{{url_for('static', filename='čtverec2.png')}}" alt="čtverec",width="250" height="250" align="right"/></p>
+<a href="https://www.google.cz/search?hl=cs&authuser=0&tbm=isch&sxsrf=ALeKk01jc7KYz7X9WqyOUip2Tny2lNQfBg%3A1605093946819&source=hp&biw=1920&bih=880&ei=OsqrX-m-LsKbkwXxybLACw&q=%C4%8Dtverec&oq=&gs_lcp=CgNpbWcQARgAMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnUABYAGD6FWgBcAB4AIABAIgBAJIBAJgBAKoBC2d3cy13aXotaW1nsAEK&sclient=img">Google vyhledávíní čtverce</a>
+
+<p><strong>Obsah čtverce</strong></p>
+
+<form method='get'>
+    <input type="text" name="x" value="{{request.args.get('x') or '' }}" placeholder="strana a"/>
+    <input type="submit" name="tlacitko" value="vypočítej to!"/>
+</form> 
+
+Obsah: {{ z }} j&sup2 <br>
+Obvod: {{ n }} j
+{% endblock obsah %}

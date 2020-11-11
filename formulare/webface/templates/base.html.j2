@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <title>Nijak: {{title}}</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" 
+        href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+
+<nav>
+  
+  <ul>
+    <br>
+    <br>
+    <li><a href="{{url_for('index')}}"><strong>Index</strong></a></li><br>
+    <li><a href="{{url_for('info')}}"><strong>Info</strong></a></li><br>
+    <li><a href="{{url_for('obdelník')}}"><strong>Obdelník</strong></a></li><br>
+    <li><a href="{{url_for('čtverec')}}"><strong>Čtverec</strong></a></li><br>
+    <li><a href="{{url_for('tajné')}}"><strong>Tajné</strong></a></li><br>
+    <li><a href="{{url_for('logout')}}"><strong>Logout</strong></a></li><br>
+  </ul>
+
+  <p><img src="{{url_for('static', filename='kalkulačka.png')}}" alt="#"/></p>
+  <p><img src="{{url_for('static', filename='kalkulačka.png')}}" alt="#"/></p>
+  <p><img src="{{url_for('static', filename='kalkulačka.png')}}" alt="#"/></p>
+  <p><img src="{{url_for('static', filename='kalkulačka.png')}}" alt="#"/></p>
+
+</nav>
+
+{% block obsah %}
+<main>
+
+<p>Tyto stránky jsou věnovány výpočtům obsahů, obvodů, přihlašování se a odhlašování se. Jakýkoliv skrytý kontent je žádaný, nikoliv náhodný jev.</p>
+
+</main>
+{% endblock obsah%}
+
+<footer>
+  <p>To je vše</p>
+</footer>
+
+</body></html>
